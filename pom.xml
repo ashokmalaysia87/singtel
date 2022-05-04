@@ -4,6 +4,10 @@
   <artifactId>Singtel</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
+<<<<<<< HEAD
+=======
+
+>>>>>>> a981297b7b3a20b6a54f51c142cb6439f1857434
 <build>
    <plugins>
    <plugin>
@@ -16,7 +20,10 @@
     </plugin>
    </plugins>
    </build>
+<<<<<<< HEAD
 
+=======
+>>>>>>> a981297b7b3a20b6a54f51c142cb6439f1857434
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
 <dependencies>
 
