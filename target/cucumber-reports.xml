@@ -1,36 +1,110 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="34.956">
-<testcase classname="Create the Todos" name="User is able to create Todo and the Todos are listed as items" time="7.12">
+<testsuite errors="0" failures="3" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="46.427">
+<testcase classname="Create the Todos" name="User is able to create Todo and the Todos are listed as items" time="7.996">
 <system-out><![CDATA[Given User is on Todos management screen....................................passed
 When User creates the Todos and hit the Enter button........................passed
 Then Created Todos are listed as items in the same screen...................passed
 ]]></system-out>
 </testcase>
-<testcase classname="Remove the Todos" name="User is able to Remove the Completed Todos" time="3.916">
-<system-out><![CDATA[Given User is on Todos management screen to Remove the Todos................passed
-When User creates the Todos and Change the status of Todos to completed and Clear the Completed Todos.passed
-Then Completed and clear Todos are removed from the list....................passed
-]]></system-out>
+<testcase classname="Remove the Todos" name="User is able to Remove the Completed Todos" time="4.11">
+<failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=101.0.4951.41)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:59'&#10;System info: host: 'DESKTOP-UAGSLS2', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ATTICH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64227}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: fbcccb2d3f516a6445597b8979be21f4&#10;*** Element info: {Using=xpath, value=/html/body/section/section/ul/li/div/input}" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on Todos management screen to Remove the Todos................passed
+When User creates the Todos and Change the status of Todos to completed and Clear the Completed Todos.failed
+Then Completed and clear Todos are removed from the list....................skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.41)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:59'
+System info: host: 'DESKTOP-UAGSLS2', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ATTICH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64227}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: fbcccb2d3f516a6445597b8979be21f4
+*** Element info: {Using=xpath, value=/html/body/section/section/ul/li/div/input}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at Stepdefinitions.TodoDelete.User_creates_the_Todos_and_Change_the_status_of_Todos_to_completed_and_Clear_the_Completed_Todos(TodoDelete.java:73)
+	at ✽.User creates the Todos and Change the status of Todos to completed and Clear the Completed Todos(file:///C:/Users/ATTIC%20HOUSE/Desktop/2022/Singtel/src/test/resources/Features/RemoveTodo.feature:5)
+]]></failure>
 </testcase>
-<testcase classname="Validate the items left for each status" name="Verify the numbers of items displayed is same for all Todo views" time="4.395">
-<system-out><![CDATA[Given User is on Todos management screen to verify number of items value....passed
-When User creates the Todos and hit the Enter button and change the 1st Todo to completed and Click on all views and compare the items left value.passed
-Then items left value is based on the remaining Active Todos for all views..passed
-]]></system-out>
+<testcase classname="Validate the items left for each status" name="Verify the numbers of items displayed is same for all Todo views" time="3.123">
+<failure message="no such window: target window already closed&#10;from unknown error: web view not found&#10;  (Session info: chrome=101.0.4951.41)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:59'&#10;System info: host: 'DESKTOP-UAGSLS2', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ATTICH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 67fe5edb918d456205a96953e5a46dd7" type="org.openqa.selenium.NoSuchWindowException"><![CDATA[Given User is on Todos management screen to verify number of items value....failed
+When User creates the Todos and hit the Enter button and change the 1st Todo to completed and Click on all views and compare the items left value.skipped
+Then items left value is based on the remaining Active Todos for all views..skipped
+
+StackTrace:
+org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=101.0.4951.41)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:59'
+System info: host: 'DESKTOP-UAGSLS2', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ATTICH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64260}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 67fe5edb918d456205a96953e5a46dd7
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+	at Stepdefinitions.Validateitemsleftvalue.User_is_on_Todos_management_screen_to_verify_number_of_items_value(Validateitemsleftvalue.java:47)
+	at ✽.User is on Todos management screen to verify number of items value(file:///C:/Users/ATTIC%20HOUSE/Desktop/2022/Singtel/src/test/resources/Features/ValidateItemsLeft.feature:4)
+]]></failure>
 </testcase>
-<testcase classname="View the Todos that are active" name="User is able to view the Active Todos" time="6.353">
+<testcase classname="View the Todos that are active" name="User is able to view the Active Todos" time="3.378">
 <system-out><![CDATA[Given User is on Todos management screen to view active.....................passed
 When User creates the Todos and hit the Enter button and change the 1st Todo to completed and Click on Active button.passed
 Then Active Todos are only listed in Todos list.............................passed
 ]]></system-out>
 </testcase>
-<testcase classname="View all the Todos" name="User is able to view the All Todos" time="7.802">
-<system-out><![CDATA[Given User is on Todos management screen to view all........................passed
-When User creates the Todos and hit the Enter button and change the 1st Todo to completed.passed
-Then Completed Todos are listed as green tick items and others without a tick mar in the Todos list.passed
-]]></system-out>
+<testcase classname="View all the Todos" name="User is able to view the All Todos" time="18.94">
+<failure message="chrome not reachable&#10;  (Session info: chrome=101.0.4951.41)&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:59'&#10;System info: host: 'DESKTOP-UAGSLS2', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ATTICH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64318}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 9ed96389a03107fd7abb457a60d673ca" type="org.openqa.selenium.WebDriverException"><![CDATA[Given User is on Todos management screen to view all........................failed
+When User creates the Todos and hit the Enter button and change the 1st Todo to completed.skipped
+Then Completed Todos are listed as green tick items and others without a tick mar in the Todos list.skipped
+
+StackTrace:
+org.openqa.selenium.WebDriverException: chrome not reachable
+  (Session info: chrome=101.0.4951.41)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:59'
+System info: host: 'DESKTOP-UAGSLS2', ip: '192.168.0.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 101.0.4951.41, chrome: {chromedriverVersion: 100.0.4896.60 (6a5d10861ce8..., userDataDir: C:\Users\ATTICH~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:64318}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 9ed96389a03107fd7abb457a60d673ca
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)
+	at org.openqa.selenium.remote.RemoteWebDriver$RemoteWebDriverOptions$RemoteWindow.maximize(RemoteWebDriver.java:837)
+	at Stepdefinitions.TodoViewAll.User_is_on_Todos_management_screen_to_view_all(TodoViewAll.java:42)
+	at ✽.User is on Todos management screen to view all(file:///C:/Users/ATTIC%20HOUSE/Desktop/2022/Singtel/src/test/resources/Features/ViewAllTodo.feature:4)
+]]></failure>
 </testcase>
-<testcase classname="View Completed Todos" name="User is able to view the Completed Todos" time="4.564">
+<testcase classname="View Completed Todos" name="User is able to view the Completed Todos" time="7.611">
 <system-out><![CDATA[Given User is on Todos management screen to view completed..................passed
 When User creates the Todos and hit the Enter button and change the status of Todos to completed and Click on Completed button.passed
 Then Completed Todos are listed as green tick items in the Todos list.......passed
