@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="6" time="37.417">
+<testcase classname="Create the Todos" name="User is able to create Todo and the Todos are listed as items" time="9.579">
+<system-out><![CDATA[Given User is on Todos management screen....................................passed
+When User creates the Todos and hit the Enter button........................passed
+Then Created Todos are listed as items in the same screen...................passed
+]]></system-out>
+</testcase>
+<testcase classname="Remove the Todos" name="User is able to Remove the Completed Todos" time="4.971">
+<system-out><![CDATA[Given User is on Todos management screen to Remove the Todos................passed
+When User creates the Todos and Change the status of Todos to completed and Clear the Completed Todos.passed
+Then Completed and clear Todos are removed from the list....................passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate the items left for each status" name="Verify the numbers of items displayed is same for all Todo views" time="6.764">
+<system-out><![CDATA[Given User is on Todos management screen to verify number of items value....passed
+When User creates the Todos and hit the Enter button and change the 1st Todo to completed and Click on all views and compare the items left value.passed
+Then items left value is based on the remaining Active Todos for all views..passed
+]]></system-out>
+</testcase>
+<testcase classname="View the Todos that are active" name="User is able to view the Active Todos" time="6.266">
+<system-out><![CDATA[Given User is on Todos management screen to view active.....................passed
+When User creates the Todos and hit the Enter button and change the 1st Todo to completed and Click on Active button.passed
+Then Active Todos are only listed in Todos list.............................passed
+]]></system-out>
+</testcase>
+<testcase classname="View all the Todos" name="User is able to view the All Todos" time="4.551">
+<system-out><![CDATA[Given User is on Todos management screen to view all........................passed
+When User creates the Todos and hit the Enter button and change the 1st Todo to completed.passed
+Then Completed Todos are listed as green tick items and others without a tick mar in the Todos list.passed
+]]></system-out>
+</testcase>
+<testcase classname="View Completed Todos" name="User is able to view the Completed Todos" time="4.86">
+<system-out><![CDATA[Given User is on Todos management screen to view completed..................passed
+When User creates the Todos and hit the Enter button and change the status of Todos to completed and Click on Completed button.passed
+Then Completed Todos are listed as green tick items in the Todos list.......passed
+]]></system-out>
+</testcase>
+</testsuite>
