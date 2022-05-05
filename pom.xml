@@ -23,10 +23,10 @@
    
    
    <distributionManagement>
-    <snapshotRepository>
+    <repository>
     <id>nexus1</id>
     <url>http://localhost:8081/repository/nexus1/</url>
-    </snapshotRepository>
+    </repository>
   </distributionManagement>
 
 <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-java -->
