@@ -24,8 +24,8 @@
    
    <distributionManagement>
     <repository>
-    <id>maven-central</id>
-    <url>http://localhost:8081/repository/maven-central/</url>
+    <id>nexus1</id>
+    <url>http://localhost:8081/repository/nexus1/</url>
     </repository>
   </distributionManagement>
 
